@@ -44,6 +44,7 @@ git clone https://github.com/thefurballtwins/thefurballtwins.git
 cd thefurballtwins
 npm install
 npm run dev
+```
 
 ## 📬 Contact
 
