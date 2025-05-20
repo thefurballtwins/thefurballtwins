@@ -2,6 +2,10 @@ import { Analytics } from '@vercel/analytics/react';
 import React from "react";
 import { InstagramIcon, YoutubeIcon } from "lucide-react";
 
+const TikTokID    = import.meta.env.VITE_TIKTOK_ID;
+const InstagramID = import.meta.env.VITE_INSTAGRAM_ID;
+const YouTubeID   = import.meta.env.VITE_YOUTUBE_ID;
+
 export default function App() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-100 text-gray-800 font-sans">
@@ -83,6 +87,39 @@ export default function App() {
           <strong>Teddy & Foxy</strong> are twin kittens with big personalities. From bath-time meltdowns to surprise attacks,
           they’re taking over TikTok, Instagram, and YouTube Shorts — one chaotic moment at a time. Follow their journey for daily laughs and furry drama.
         </p>
+      </section>
+
+      <section className="py-12 px-4">
+        <h2 className="text-3xl font-bold text-purple-700 mb-8 text-center">
+          Take a Peek at Their Daily Chaos
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+
+          {/* 1) TikTok */}
+          <iframe
+            src={`https://www.tiktok.com/embed/v2/${TikTokID}/`}
+            className="w-150 h-[750px] rounded-lg"
+            sandbox="allow-scripts allow-same-origin"
+          ></iframe>
+
+          {/* 2) Instagram */}
+          <iframe
+            src={`https://www.instagram.com/p/${InstagramID}/embed`}
+            className="w-150 h-[750px] rounded-lg"
+            scrolling="no"
+            allowTransparency="true"
+          ></iframe>
+
+          {/* 3) YouTube Shorts */}
+          <iframe
+            src={`https://www.youtube.com/embed/${YouTubeID}?&autoplay=0`}
+            className="w-150 h-[750px] rounded-lg"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+
+        </div>
       </section>
 
       <footer className="text-center py-6 text-sm text-gray-600">
