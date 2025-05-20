@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import React from "react";
 import { InstagramIcon, YoutubeIcon } from "lucide-react";
 
@@ -54,6 +55,8 @@ export default function App() {
         © 2025 The Furball Twins · Built with React & Tailwind ·{" "}
         <a href="mailto:thefurballtwins@gmail.com" className="underline hover:text-purple-700">Contact</a>
       </footer>
+
+      <Analytics />
     </main>
   );
 }
