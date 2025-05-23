@@ -1,0 +1,6 @@
+# Allow all crawlers access
+User-agent: *
+Allow: /
+
+# Explicitly point to your sitemap
+Sitemap: https://thefurballtwins.com/sitemap.xml
